@@ -6,15 +6,14 @@
     <link rel="stylesheet" href="template.css">
     <link rel="stylesheet" href="inicio.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-
-    <title>Document</title>
+    <title>Home</title>
 </head>
 <body>
     <header>
         <img src="Life_TouR-01 1.png" alt="">
         <nav>
-            <a href="#">Home</a>
-            <a href="#">Lista de Desejos</a>
+            <a href="./inicio.html">Home</a>
+            <a href="./listadedesejo.html">Lista de Desejos</a>
             <a href="#">Logout</a>
         </nav>
     </header>
@@ -26,8 +25,8 @@
         </button>
     </div>
     
-    <main>
-        <fieldset>
+    <main id="main">
+        <fieldset id="fieldset" class="active">
             <legend>Escolha suas opções:</legend>
             
             <div class="checkbox-container">
@@ -68,19 +67,26 @@
     </main>
     <div class="card-container">
         <div class="card">
-            <img src="z_p45-Reaping 1.png" alt="Sri Lanka">
+            <img src="sirilanka.png" alt="Sri Lanka">
             <p>Sri Lanka</p>
         </div>
         <div class="card">
-            <img src="./522_Cuverville_Island_John_031 1.png" alt="Cuverville">
+            <img src="cuverville.png" alt="Cuverville">
             <p>Cuverville</p>
         </div>
         <div class="card">
-            <img src="Wind Surfing - One HourN 2.png" alt="Bahamas">
+            <img src="windsurf.png" alt="Bahamas">
             <p>Bahamas</p>
         </div>
     </div>    
     <script>
+
+        document.querySelector('.menu-icon').addEventListener("click", () => {
+            const fieldset = document.getElementById("main");
+            fieldset.classList.toggle('active'); // Alterna a classe 'active'
+        });
+
+
         const checkbox_aventura = document.getElementById('Aventura');
         const card_container = document.querySelector('.card-container');
         
