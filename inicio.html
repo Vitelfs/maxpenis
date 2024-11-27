@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="template.css">
+    <link rel="stylesheet" href="inicio.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <img src="Life_TouR-01 1.png" alt="">
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Lista de Desejos</a>
+            <a href="#">Logout</a>
+        </nav>
+    </header>
+    <div class="search-bar-container">
+        <i class="fas fa-bars menu-icon"></i>
+        <input type="search" name="pesquisar" id="search" placeholder="Pesquisar...">
+        <button class="search-button">
+            <i class="fas fa-search"></i>
+        </button>
+    </div>
+    
+    <main>
+        <fieldset>
+            <legend>Escolha suas opções:</legend>
+            
+            <div class="checkbox-container">
+                <input type="checkbox" id="cultural" name="cultural" value="cultural">
+                <label for="cultural">Cultural</label>
+            </div>
+            
+            <div class="checkbox-container">
+                <input type="checkbox" id="Intercambio" name="Intercambio" value="Intercambio">
+                <label for="Intercambio">Intercambio</label>
+            </div>
+            
+            <div class="checkbox-container">
+                <input type="checkbox" id="Rural" name="Rural" value="Rural">
+                <label for="Rural">Rural</label>
+            </div>
+        
+            <div class="checkbox-container">
+                <input type="checkbox" id="Aventura" name="Aventura" value="Aventura">
+                <label for="Aventura">Aventura</label>
+            </div>
+        
+            <div class="checkbox-container">
+                <input type="checkbox" id="Negocios" name="Negócios" value="Negócios">
+                <label for="Negócios">Negócios</label>
+            </div>
+        
+            <div class="checkbox-container">
+                <input type="checkbox" id="Saude" name="Saúde" value="Saúde">
+                <label for="Saúde">Saúde</label>
+            </div>
+        
+            <div class="checkbox-container">
+                <input type="checkbox" id="Gastronomia" name="Gastronomia" value="Gastronomia">
+                <label for="Gastronomia">Gastronomia</label>
+            </div>
+        </fieldset>
+    </main>
+    <div class="card-container">
+        <div class="card">
+            <img src="z_p45-Reaping 1.png" alt="Sri Lanka">
+            <p>Sri Lanka</p>
+        </div>
+        <div class="card">
+            <img src="./522_Cuverville_Island_John_031 1.png" alt="Cuverville">
+            <p>Cuverville</p>
+        </div>
+        <div class="card">
+            <img src="Wind Surfing - One HourN 2.png" alt="Bahamas">
+            <p>Bahamas</p>
+        </div>
+    </div>    
+    <script>
+        const checkbox_aventura = document.getElementById('Aventura');
+        const card_container = document.querySelector('.card-container');
+        
+        checkbox_aventura.addEventListener('change', () => {
+            card_container.style.display = checkbox_aventura.checked ? 'flex' : 'none';
+        });
+
+    </script>
+</body>
+</html>
